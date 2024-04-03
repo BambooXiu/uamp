@@ -72,7 +72,7 @@ class MediaItemAdapter(
 
             Glide.with(holder.albumArt)
                 .load(mediaItem.albumArtUri)
-                .placeholder(R.drawable.default_art)
+//                .placeholder(R.drawable.default_art)
                 .into(holder.albumArt)
         }
     }

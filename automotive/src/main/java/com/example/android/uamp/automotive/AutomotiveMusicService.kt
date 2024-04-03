@@ -100,7 +100,8 @@ class AutomotiveMusicService : MusicService() {
      */
     private fun requireLogin() {
         val loginIntent = Intent(this, SignInActivity::class.java)
-        val loginActivityPendingIntent = PendingIntent.getActivity(this, 0, loginIntent, 0)
+        val loginActivityPendingIntent = PendingIntent.getActivity(this, 0, loginIntent,
+            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE)
         val extras = Bundle().apply {
             putString(ERROR_RESOLUTION_ACTION_LABEL, getString(R.string.error_login_button))
             putParcelable(ERROR_RESOLUTION_ACTION_INTENT, loginActivityPendingIntent)

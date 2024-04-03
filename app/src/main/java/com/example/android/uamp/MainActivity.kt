@@ -31,6 +31,7 @@ import com.example.android.uamp.viewmodels.MainActivityViewModel
 import com.google.android.gms.cast.framework.CastButtonFactory
 import com.google.android.gms.cast.framework.CastContext
 
+
 class MainActivity : AppCompatActivity() {
 
     private val viewModel by viewModels<MainActivityViewModel> {
@@ -88,7 +89,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     @Override
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
         super.onCreateOptionsMenu(menu)
         menuInflater.inflate(R.menu.main_activity_menu, menu)
 
